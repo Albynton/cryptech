@@ -21,7 +21,7 @@ void cesar_crypt (int decallage, char *file,char name[])
         fclose(pgmimg); //fermeture du fichier
     }
 
-void cesar_normal (int decallage, char *file,char name[])
+void cesar_decrypt (int decallage, char *file,char name[])
     {
         //boucle de decryptage
         for(int i=0 ; i<strlen(file) ; i++){
@@ -37,7 +37,7 @@ void cesar_normal (int decallage, char *file,char name[])
             file[i] = file[i] + decallage; // affectation de la valeur originale
         }
 
-        FILE* pgmimg; // nouvelle variable de type fichier 
+        FILE* pgmimg; // nouvelle variable de type fichier
         pgmimg = fopen(name, "a"); // ouverture du nouveau fichier
         for (int i = 0; i < strlen(file); i++)
         {
@@ -46,4 +46,3 @@ void cesar_normal (int decallage, char *file,char name[])
         }
         fclose(pgmimg); // fermeture du fichier
     }
-    
