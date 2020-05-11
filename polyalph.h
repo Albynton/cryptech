@@ -21,7 +21,7 @@ void poly_crypt(char key[], char *file, char name[])
             file[i] = ((file[i] + newKey[i])) + 'a';
         }
 
-        //creation du fichier crypte
+        //creation du fichier crypteo
         FILE* pgmimg;
         pgmimg = fopen(name, "a"); // ouverture du fichier
         //fprintf(pgmimg,"tag 2\n");//info pour reconnaitre les modifications apportees automatiquement
@@ -32,7 +32,7 @@ void poly_crypt(char key[], char *file, char name[])
         fclose(pgmimg);//fermeture du fichier
     }
 
-void poly_normal(char key[], char *file, char name[])
+void poly_decrypt(char key[], char *file, char name[])
     {
         char newKey[strlen(file)];
         int i,j;
