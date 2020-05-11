@@ -32,7 +32,7 @@ void v_crypt(char key[],int fatkey[256][256], char *file,char name[])
         fclose(pgmimg);
     }
 
-void v_normal(char key[],int fatkey[256][256], char *file,char name[])
+void v_decrypt(char key[],int fatkey[256][256], char *file,char name[])
     {
         int newKey[256],i,j;
         //boucle assurant que la taille de la cle est la meme que le texte par repetition
