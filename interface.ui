@@ -3,23 +3,21 @@
 <interface>
   <requires lib="gtk+" version="3.20"/>
   <object class="GtkWindow" id="window">
-    <property name="can_focus">False</property>
     <property name="visible">True</property>
-    <property name="default-width">850</property>
-    <property name="default-height">500</property>
+    <property name="can_focus">False</property>
     <property name="title" translatable="yes">cryptech</property>
-    <!--<child type="titlebar">
+    <property name="default_width">850</property>
+    <property name="default_height">500</property>
+    <child type="titlebar">
       <placeholder/>
-    </child>-->
+    </child>
     <child>
       <object class="GtkFixed" id="fixed1">
-        <!--<property name="width_request">840</property>
-        <property name="height_request">500</property>-->
-      <property name="visible">True</property>
+        <property name="visible">True</property>
         <property name="can_focus">False</property>
         <child>
           <object class="GtkButton" id="button1">
-            <property name="width_request">60</property>
+            <property name="width_request">80</property>
             <property name="height_request">50</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
@@ -31,7 +29,7 @@
               <object class="GtkImage">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="icon-name">changes-prevent-symbolic</property>
+                <property name="icon_name">changes-prevent-symbolic</property>
               </object>
             </child>
           </object>
@@ -97,7 +95,7 @@ grâce à notre technologie de pointe.
         </child>
         <child>
           <object class="GtkButton" id="button2">
-            <property name="width_request">60</property>
+            <property name="width_request">80</property>
             <property name="height_request">50</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
@@ -109,7 +107,7 @@ grâce à notre technologie de pointe.
               <object class="GtkImage">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="icon-name">changes-allow-symbolic</property>
+                <property name="icon_name">changes-allow-symbolic</property>
               </object>
             </child>
           </object>
@@ -182,33 +180,17 @@ grâce à notre technologie de pointe.
             <property name="visible">True</property>
             <property name="can_focus">True</property>
             <property name="tooltip_text" translatable="yes">Clef de chifrement</property>
-            <!--<property name="max_length">40</property>-->
             <property name="placeholder_text" translatable="yes">supersecret42</property>
             <signal name="changed" handler="on_entry1_changed" swapped="no"/>
           </object>
           <packing>
             <property name="x">400</property>
-            <property name="y">280</property>
-          </packing>
-        </child>
-        <child>
-          <object class="GtkEntry" id="entry2">
-            <property name="width_request">200</property>
-            <property name="visible">True</property>
-            <property name="can_focus">True</property>
-            <property name="tooltip_text" translatable="yes">Nom du fichier cible</property>
-            <property name="max_length">40</property>
-            <property name="placeholder_text" translatable="yes">exemple.txt</property>
-            <signal name="changed" handler="on_entry2_changed" swapped="no"/>
-          </object>
-          <packing>
-            <property name="x">400</property>
-            <property name="y">320</property>
+            <property name="y">300</property>
           </packing>
         </child>
         <child>
           <object class="GtkButton" id="button3">
-            <property name="width_request">60</property>
+            <property name="width_request">80</property>
             <property name="height_request">50</property>
             <property name="visible">True</property>
             <property name="can_focus">True</property>
@@ -219,7 +201,7 @@ grâce à notre technologie de pointe.
               <object class="GtkImage">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="icon-name">document-save-symbolic</property>
+                <property name="icon_name">document-save-symbolic</property>
               </object>
             </child>
           </object>
@@ -256,15 +238,6 @@ grâce à notre technologie de pointe.
                   <object class="GtkMenu">
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
-                    <!--<child>
-                      <object class="GtkImageMenuItem" id="new">
-                        <property name="label">gtk-new</property>
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="use_underline">True</property>
-                        <property name="use_stock">True</property>
-                      </object>
-                    </child>-->
                     <child>
                       <object class="GtkImageMenuItem" id="open">
                         <property name="label">gtk-open</property>
@@ -274,24 +247,6 @@ grâce à notre technologie de pointe.
                         <property name="use_stock">True</property>
                       </object>
                     </child>
-                    <!--<child>
-                      <object class="GtkImageMenuItem" id="save">
-                        <property name="label">gtk-save</property>
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="use_underline">True</property>
-                        <property name="use_stock">True</property>
-                      </object>
-                    </child>
-                    <child>
-                      <object class="GtkImageMenuItem" id="SaveAs">
-                        <property name="label">gtk-save-as</property>
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="use_underline">True</property>
-                        <property name="use_stock">True</property>
-                      </object>
-                    </child>-->
                     <child>
                       <object class="GtkSeparatorMenuItem">
                         <property name="visible">True</property>
@@ -311,56 +266,6 @@ grâce à notre technologie de pointe.
                 </child>
               </object>
             </child>
-            <!--<child>
-              <object class="GtkMenuItem">
-                <property name="visible">True</property>
-                <property name="can_focus">False</property>
-                <property name="label" translatable="yes">_Éditer</property>
-                <property name="use_underline">True</property>
-                <child type="submenu">
-                  <object class="GtkMenu">
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <child>
-                      <object class="GtkImageMenuItem" id="cut">
-                        <property name="label">gtk-cut</property>
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="use_underline">True</property>
-                        <property name="use_stock">True</property>
-                      </object>
-                    </child>
-                    <child>
-                      <object class="GtkImageMenuItem" id="copy">
-                        <property name="label">gtk-copy</property>
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="use_underline">True</property>
-                        <property name="use_stock">True</property>
-                      </object>
-                    </child>
-                    <child>
-                      <object class="GtkImageMenuItem" id="paste">
-                        <property name="label">gtk-paste</property>
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="use_underline">True</property>
-                        <property name="use_stock">True</property>
-                      </object>
-                    </child>
-                    <child>
-                      <object class="GtkImageMenuItem" id="del">
-                        <property name="label">gtk-delete</property>
-                        <property name="visible">True</property>
-                        <property name="can_focus">False</property>
-                        <property name="use_underline">True</property>
-                        <property name="use_stock">True</property>
-                      </object>
-                    </child>
-                  </object>
-                </child>
-              </object>
-            </child>-->
             <child>
               <object class="GtkMenuItem">
                 <property name="visible">True</property>
