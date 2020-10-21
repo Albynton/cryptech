@@ -1,6 +1,6 @@
 README for Cryptech 
 ========================
-cryptech is an open source software. Current version is 0.3.1, built with GTK+ 3.24 in C.
+*cryptech* is an open source software. Current version is 0.3.1, built with GTK+ 3.24 in C.
 
 ## Launching the app
 Navigate to folder:
@@ -31,9 +31,15 @@ If you are still reading this then as the prophecy foretold you must be the chos
 
 Make sure you have the GTK+3 libraries installed before compiling, it will produce an error otherwise.
 
-Install GTK+3 libraries (Debian):
+Install GTK+3 libraries:
+
+- In Debian-based distributions:
 ```bash
 $ apt-get install libgtk-3-dev
+```
+- In Arch-based distributions:
+```bash
+$ pacman -S gtk3
 ```
 
 Compiling :
@@ -41,4 +47,4 @@ Compiling :
 $ make cryptech
 ```
 
-Don't forget that `git blame` is easy to use so if you try anning stupid, we will look for you, we will find you and we will blame you !
+Don't forget that `git blame` is easy to use so if you try anning stupid, we will look for you, we will find you and we will blame you!
