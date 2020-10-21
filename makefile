@@ -8,6 +8,8 @@ FLAGS = `pkg-config --cflags --libs gtk+-3.0` -rdynamic
 
 cryptech: main.c crypt1.h crypt2.h crypt3.h
 	$(CC) -o $@ main.c $(FLAGS)
+exe: cryptech
+	./cryptech
 
 clean:
 	rm -f cryptech
