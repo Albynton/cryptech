@@ -23,7 +23,7 @@ The encryption techniques used in this version are *OBSOLETE* so be careful out 
 
 ## Having fun 
 If your sole purpose in life is destroying the hard work done by large teams of devs such as no one…
-Then you will have a blast messing around with the file [`interface.ui`](./interface.ui).
+Then you will have a blast messing around with the file [`interface.ui`](./interface.ui) or [main.c](./main.c), at the heart of the app.
 Have fun!
 
 ## Contribution
